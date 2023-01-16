@@ -864,4 +864,14 @@ const initApp = () => {
         ? event.target.textContent = 'Clicked'
         : event.target.textContent = 'My 2nd View'
     }, false)
+
+    const nav = document.querySelector('nav')
+
+    nav.addEventListener( 'mouseover', (event) => {
+        event.target.classList.add('height100')
+    })
+
+    nav.addEventListener( 'mouseout', (event) => {
+        event.target.classList.remove('height100')
+    })
 }
