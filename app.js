@@ -912,3 +912,21 @@ const storeLength = localStorage.length
 const myLocalData = JSON.parse(localStorage.getItem('myLocalStorage'))
 console.log(key);
 console.log(storeLength); */
+
+// Modules
+
+// import playGuitar from "./guitar.js";
+// import { shredding as shred, plucking as fingerpicking} from "./guitar.js";
+
+
+import * as Guitars from './guitar.js'
+import User from './user.js'
+
+const me = new User('user@gmail.com', 'Jana')
+
+console.log(me);
+console.log(me.greeting());
+
+console.log(Guitars.playGuitar());
+console.log(Guitars.shredding());
+console.log(Guitars.plucking());
