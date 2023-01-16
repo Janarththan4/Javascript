@@ -841,15 +841,27 @@ const initApp = () => {
     const h2 = div.querySelector('h2')
 
     view.addEventListener('click', (event) => {
-        event.target.style.backgroundColor = 'gold'
+        // event.target.style.backgroundColor = 'purple'
+        // view.style.backgroundColor = 'purple'
+        // view.classList.add('purple')
+        // view.classList.remove('darkblue')
+        view.classList.toggle('purple')
+        view.classList.toggle('darkblue')
+
     }, false)
 
     div.addEventListener('click', (event) => {
         // event.stopPropagation()
-        event.target.style.backgroundColor = 'tomato'
+        // event.target.style.backgroundColor = 'darkblue'
+        // div.style.backgroundColor = 'darkblue'
+        div.classList.toggle('blue')
+        div.classList.toggle('black')
     }, false)
 
     h2.addEventListener('click', (event) => {
-        event.target.textContent = 'Clicked'
+        const myText = event.target.textContent
+        myText === 'My 2nd View'
+        ? event.target.textContent = 'Clicked'
+        : event.target.textContent = 'My 2nd View'
     }, false)
 }
