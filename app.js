@@ -832,7 +832,7 @@ document.addEventListener('readystatechange', (event) => {
     }
     initApp()
 })
-
+/*
 // event bubbling
 // false bottom-top/ true-top-bottom
 const initApp = () => {
@@ -873,5 +873,15 @@ const initApp = () => {
 
     nav.addEventListener( 'mouseout', (event) => {
         event.target.classList.remove('height100')
+    })
+}
+*/
+
+const initApp = () => {
+    const view3 = document.querySelector('#view3')
+    const myForm = view3.querySelector('#myForm')
+    myForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        console.log('submit event');
     })
 }
