@@ -826,12 +826,12 @@ h2.addEventListener('click', function(event) {
     event.target.textContent = 'Clicked'
 }) */
 
-document.addEventListener('readystatechange', (event) => {
+/* document.addEventListener('readystatechange', (event) => {
     if (event.target.readyState === 'complete') {
         console.log('readyState: complete');
     }
     initApp()
-})
+}) */
 /*
 // event bubbling
 // false bottom-top/ true-top-bottom
@@ -877,11 +877,38 @@ const initApp = () => {
 }
 */
 
-const initApp = () => {
+/* const initApp = () => {
     const view3 = document.querySelector('#view3')
     const myForm = view3.querySelector('#myForm')
     myForm.addEventListener('submit', (event) => {
         event.preventDefault()
         console.log('submit event');
     })
+} */
+
+// Web Storage API
+// not part of the DOM, refers to the windows API available to JS via the  global variable: window, we do not have to type window its implied
+
+/* window.alert('Ok')
+alert('Ok')
+window.alert(window.location)
+alert(location) */
+
+/* const myArr = ['eat', 'sleep', 'code']
+
+const myObj = {
+    name: 'Jana',
+    hobbies: ['eat', 'sleep', 'code'],
+    logName: function() {
+        console.log(this.name);
+    }
 }
+
+localStorage.setItem('myLocalStorage', JSON.stringify(myObj))
+// localStorage.removeItem('myLocalStorage')
+// localStorage.clear()
+const key = localStorage.key(0)
+const storeLength = localStorage.length
+const myLocalData = JSON.parse(localStorage.getItem('myLocalStorage'))
+console.log(key);
+console.log(storeLength); */
